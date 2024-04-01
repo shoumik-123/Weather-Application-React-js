@@ -51,8 +51,10 @@ body{
     width: 80px;
 }
 .clear-button {
+    padding: 6px 10px;
     color: #000000!important;
     background: #ffffff!important;
+    cursor: pointer;
 }
 .content{
     display: flex;

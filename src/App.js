@@ -106,9 +106,9 @@ function App() {
                 placeholder='Enter Location'
             />
             {city && (
-                <button className="clear-button" onClick={() => setCity("")}>
+                <div className="clear-button" onClick={() => setCity("")}>
                   Clear
-                </button>
+                </div>
             )}
             <button type="submit">
               <Search/>

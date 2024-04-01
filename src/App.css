@@ -16,6 +16,7 @@ body{
     border-radius: 10px;
     box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.2);
     background: linear-gradient(108deg,#0a185748,#6b0b0b38);
+    transition: all 2s ease-in-out;
 }
 .app h1{
     text-align: center;
@@ -37,7 +38,7 @@ body{
 .input-wrapper input:focus{
     outline: none;
 }
-.input-wrapper button{
+.input-wrapper > button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +49,10 @@ body{
     border-bottom-right-radius: 5px;
     cursor: pointer;
     width: 80px;
+}
+.clear-button {
+    color: #000000!important;
+    background: #ffffff!important;
 }
 .content{
     display: flex;
@@ -68,8 +73,7 @@ body{
 }
 .location{margin-top: 20px;}
 .location h2{
-    margin: 0;
-    margin-left: 10px;
+    margin: 0 0 0 10px;
     font-weight: 300;
 }
 .location h2 span{
@@ -109,15 +113,32 @@ body{
     font-weight: 400;
 }
 
-.convertemp{
+.convertemp , .currentLocationBtn{
     padding: 15px 25px;
     font-size: medium;
     background: #15193dd6;
     color: floralwhite;
     overflow: hidden;
     border: none;
+    cursor: pointer;
 }
-.convertemp:hover{
+.convertemp:hover , .currentLocationBtn:hover{
     background: #070c38;
 
+}
+
+.bounce-toast {
+    transition: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
